@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "XML converter for farexplorer",
     "dependencies": {
-        "xmlbuilder": "~8.2.2"
+        "xmlbuilder": "~8.2.2",
+        "prompt": "~1.0.0"
     }
 }
