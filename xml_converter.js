@@ -1,45 +1,21 @@
 var builder = require('xmlbuilder');
 
-// var xml = builder.create('root')
-//   .ele('xmlbuilder')
-//     .ele('repo', {'type': 'git'}, 'git://github.com/oozcitak/xmlbuilder-js.git')
-//   .end({ pretty: true});
- 
-var feed = builder.create('feed', { encoding: 'utf-8' })
-  .att('xmlns', 'http://www.w3.org/2005/Atom')
-  .ele('title', { 'type': 'text'}, 'dive into mark').up()
-  .ele('subtitle', { 'type': 'html' }, 'A <em>lot</em> of effort went into making this effortless').up()
-  .ele('updated', '2005-07-31T12:29:29Z').up()
-  .ele('id', 'tag:example.org,2003:3').up()
-  .ele('link', { 'rel': 'alternate', 'type': 'text/html', 'hreflang': 'en', 'href': 'http://example.org/' }).up()
-  .ele('link', { 'rel': 'self', 'type': 'application/atom+xml', 'href': 'http://example.org/feed.atom' }).up()
-  .ele('rights', 'Copyright (c) 2003, Mark Pilgrim').up()
-  .ele('generator', { 'uri': 'http://www.example.com/', 'version': '1.0' }, 'Example Toolkit').up()
-  .ele('entry')
-    .ele('title', 'Atom draft-07 snapshot').up()
-    .ele('link', { 'rel': 'alternate', 'type': 'text/html', 'href': 'http://example.org/2005/04/02/atom' }).up()
-    .ele('link', { 'rel': 'enclosure', 'type': 'audio/mpeg', 'length': '1337', 'href': 'http://example.org/audio/ph34r_my_podcast.mp3' }).up()
-    .ele('id', 'tag:example.org,2003:3.2397').up()
-    .ele('updated', '2005-07-31T12:29:29Z').up()
-    .ele('published', '2003-12-13T08:29:29-04:00').up()
-    .ele('author')
-      .ele('name', 'Mark Pilgrim').up()
-      .ele('uri', 'http://example.org/').up()
-      .ele('email', 'f8dy@example.com').up()
-    .up()
-    .ele('contributor')
-      .ele('name', 'Sam Ruby').up()
-    .up()
-    .ele('contributor')
-      .ele('name', 'Joe Gregorio').up()
-    .up()
-    .ele('content', { 'type': 'xhtml', 'xml:lang': 'en', 'xml:base': 'http://diveintomark.org/' })
-      .ele('div', { 'xmlns': 'http://www.w3.org/1999/xhtml' })
-        .ele('p')
-          .ele('i', '[Update: The Atom draft is finished.]').up()
-        .up()
-      .up()
-    .up()
-  .up()
 
-console.log(feed.end({ pretty: true }));
+ 
+var x1 = builder.create('Onwer', { encoding: 'utf-8' })
+
+  .att('OwnerIdentifier',"AMD")
+  .ele('Nation',{'Nation': 'test1'})
+  .ele('TaxCode',{'att1': 'test1'})
+  .ele('TaxType',{'att1': 'test1', 'att2': 'test2', 'att3': 'test3'})
+  .ele('TaxRulesSequence',{'att1': 'test1', 'att2': 'test2'})
+  .ele('TaxRulesData',{'att1': 'test1', 'att2': 'test2', 'att3': 'test3'})
+  .ele('TaxUnitTag',{'att1': 'test1'}).up()
+  .ele('TaxTarget',{'att1': 'test1'})
+  .ele('CarrierApplTable',{'att1': 'test1'})
+  .ele('CarrierAppSegment').up()
+  .ele('CarrierAppSegment',{'att1': 'test1'}).up().up().up()
+  .ele('TaxApplication',{'att1': 'test1', 'att2':'test2'})
+  .ele('SpecifiedTax');
+  
+console.log(x1.end({ pretty: true }));
