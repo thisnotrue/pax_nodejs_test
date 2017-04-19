@@ -1,2 +1,7 @@
 #node modules
+# Exclude Folders
 node_modules/
+old_files/
+
+# Exclude Typescript generated files
+*.map

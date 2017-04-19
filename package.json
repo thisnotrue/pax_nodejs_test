@@ -1,9 +1,11 @@
 {
-    "name": "xml_converter",
-    "version": "0.0.1",
-    "description": "XML converter for farexplorer",
-    "dependencies": {
-        "xmlbuilder": "~8.2.2",
-        "prompt": "~1.0.0"
-    }
+  "name": "xml_converter",
+  "version": "0.0.1",
+  "description": "XML converter for farexplorer",
+  "dependencies": {
+    "xmlbuilder": "~8.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.13"
+  }
 }
