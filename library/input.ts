@@ -8,6 +8,8 @@
 
 module.exports = {
     ask: function(question, format, callback) {
+        // console.log(`Write your ${question}: `);
+        console.log(`Write your ${question}: `);
         var stdin = process.stdin,
             stdout = process.stdout;
 
@@ -22,7 +24,10 @@ module.exports = {
             } else {
                 stdout.write("It should match: " + format + "\n");
                 //Use this for calling the same function
-                this.ask(question, format, callback);
+                module.exports.ask(question, format, callback);
+                
+                //TypeError: this.ask is not a function
+                // this.ask(question, format, callback);
             }
         });
     }
