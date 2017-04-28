@@ -8,7 +8,7 @@
 module.exports = {
     ask: function (question, format, callback) {
         // console.log(`Write your ${question}: `);
-        console.log("suka");
+        console.log(`Write your ${question}: `);
         var stdin = process.stdin, stdout = process.stdout;
         stdin.resume();
         stdout.write(question + ": ");
